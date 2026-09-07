@@ -1,0 +1,182 @@
+.prompt {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .optionGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 16px 18px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  color: var(--color-text);
+  transition: border-color 0.1s ease, background 0.1s ease, transform 0.05s ease;
+}
+
+.option:hover:not(:disabled) {
+  border-color: var(--color-blue);
+  background: #f0faff;
+}
+
+.option:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.optionSelected {
+  border-color: var(--color-blue);
+  background: #ddf4ff;
+}
+
+.optionCorrect {
+  border-color: var(--color-green);
+  background: var(--color-green-light);
+  color: var(--color-green-darker);
+}
+
+.optionIncorrect {
+  border-color: var(--color-red);
+  background: #ffe3e3;
+  color: var(--color-red-dark);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.textInput {
+  width: 100%;
+  border: 2px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-size: 18px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.1s ease;
+}
+
+.textInput:focus {
+  border-color: var(--color-blue);
+}
+
+.textInputCorrect {
+  border-color: var(--color-green);
+  background: var(--color-green-light);
+}
+
+.textInputIncorrect {
+  border-color: var(--color-red);
+  background: #ffe3e3;
+}
+
+/* Word bank */
+.answerStrip {
+  min-height: 56px;
+  border-bottom: 2px solid var(--color-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.wordChip {
+  border: 2px solid var(--color-border-strong);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.wordChipGhost {
+  background: var(--color-bg-muted);
+  border-style: dashed;
+  color: transparent;
+}
+
+.wordBankRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.wordChipButton {
+  border: 2px solid var(--color-border-strong);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 2px 0 var(--color-border-strong);
+}
+
+.wordChipButton:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.wordChipButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Match pairs */
+.matchGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.matchCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.matchItem {
+  border: 2px solid var(--color-border-strong);
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+
+.matchItemSelected {
+  border-color: var(--color-blue);
+  background: #ddf4ff;
+}
+
+.matchItemMatched {
+  border-color: var(--color-green);
+  background: var(--color-green-light);
+  opacity: 0.7;
+}
+
+.matchItem:disabled {
+  cursor: default;
+}

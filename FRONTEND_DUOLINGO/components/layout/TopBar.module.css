@@ -1,0 +1,105 @@
+.topbar {
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 2px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-green);
+}
+
+.logoMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 3px 0 var(--color-green-darker);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.streak {
+  color: var(--color-yellow-dark);
+}
+.xp {
+  color: var(--color-yellow-dark);
+}
+.hearts {
+  color: var(--color-red);
+}
+.gems {
+  color: var(--color-blue);
+}
+
+.icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.skeleton {
+  width: 64px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    #f7f7f7 37%,
+    var(--color-bg-muted) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .brandText {
+    display: none;
+  }
+  .stat {
+    padding: 6px 9px;
+    font-size: 13px;
+  }
+}

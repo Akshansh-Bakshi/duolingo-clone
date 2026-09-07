@@ -1,0 +1,98 @@
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 6px 0;
+}
+
+.nodeBtn {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  position: relative;
+  transition: transform 0.08s ease;
+}
+
+.nodeBtn:active:not(:disabled) {
+  transform: translateY(3px);
+}
+
+.available {
+  background: var(--color-green);
+  box-shadow: 0 6px 0 var(--color-green-darker);
+  color: #fff;
+}
+
+.completed {
+  background: var(--color-yellow);
+  box-shadow: 0 6px 0 var(--color-yellow-dark);
+  color: #fff;
+}
+
+.locked {
+  background: var(--color-locked);
+  box-shadow: 0 6px 0 var(--color-border-strong);
+  color: var(--color-locked-text);
+  cursor: not-allowed;
+}
+
+.ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+}
+
+.label {
+  margin-top: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13px;
+  text-align: center;
+  max-width: 110px;
+  color: var(--color-text);
+}
+
+.lockedLabel {
+  color: var(--color-text-faint);
+}
+
+.crownRow {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.crownIcon {
+  font-size: 12px;
+  opacity: 0.35;
+}
+.crownFilled {
+  opacity: 1;
+}
+
+.startBadge {
+  position: absolute;
+  top: -30px;
+  background: #fff;
+  border: 2px solid var(--color-border);
+  color: var(--color-green);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.lockIcon {
+  font-size: 26px;
+}

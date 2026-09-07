@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--color-text-faint);
+  line-height: 1;
+  padding: 4px;
+}
+.closeBtn:hover {
+  color: var(--color-text-soft);
+}
+
+.track {
+  flex: 1;
+  height: 16px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--color-green);
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+
+.hearts {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-red);
+  font-size: 16px;
+  min-width: 44px;
+  justify-content: flex-end;
+}
