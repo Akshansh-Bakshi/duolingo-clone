@@ -1,4 +1,4 @@
-# Duolingo Web App Clone — SDE Fullstack Assignment
+# Duolingo Web App Clone (SDE Fullstack Assignment)
 
 This repository contains the implementation for the Duolingo Web App clone
 assignment described in `ProjectSpecs.md`.
