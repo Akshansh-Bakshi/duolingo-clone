@@ -20,11 +20,18 @@ export default function SkillNode({ skill, offset, isNextUp }: Props) {
 
   const handleClick = () => {
     if (skill.status === "LOCKED") return;
-    const firstLesson = [...skill.lessons].sort(
+    const sortedLessons = [...skill.lessons].sort(
       (a, b) => a.order_index - b.order_index
-    )[0];
-    if (!firstLesson) return;
-    router.push(`/lesson/${firstLesson.id}`);
+    );
+    if (sortedLessons.length === 0) return;
+    // completion_percent (server-computed as completed_count / total * 100)
+    // tells us how many lessons in this skill are already done — jump to
+    // the next incomplete one instead of always reopening lesson 1.
+    const completedCount = Math.round(
+      (skill.completion_percent / 100) * sortedLessons.length
+    );
+    const nextIndex = Math.min(completedCount, sortedLessons.length - 1);
+    router.push(`/lesson/${sortedLessons[nextIndex].id}`);
   };
 
   const statusClass =
